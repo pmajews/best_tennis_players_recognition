@@ -26,7 +26,7 @@ def classify_image(image_base64_data, file_path=None):
         final = combined_img.reshape(1,len_image_array).astype(float)
         result.append({
             'class': class_number_to_name(__model.predict(final)[0]),
-            'class_probability': np.around(__model.predict_proba(final) * 100, 2).tolist()[0],
+            'class_probability': np.around(__model.predict_proba(final)*100,2).tolist()[0],
             'class_dictionary': __class_name_to_number
         })
 
@@ -85,4 +85,4 @@ def get_b64_test_image():
 if __name__ == '__main__':
     load_saved_artifacts()
 
-    #print(classify_image(None, r"C:\Users\przem\Desktop\best_tennis_players_recognition\server\test_images\medvedev-2.jpg"))
+    print(classify_image(None, r"C:\Users\przem\Desktop\Nowy\novak.jpg"))
