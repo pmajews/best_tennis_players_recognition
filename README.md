@@ -1,3 +1,4 @@
+![](./app.jpg)
 # Best Tennis Players Recognition
 ### The purpose of that project was to recognize four, the best tennis male players
   - Daniil Medvedev
